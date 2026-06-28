@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Memory Just for You</title>
+    <style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#ffd6e7,#fff7fb);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+img{
+    max-width:90vw;
+    max-height:90vh;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    opacity:0;
+    transition:opacity .6s ease;
+}
+
+.message{
+    position:absolute;
+    top:25px;
+    color:#d63384;
+    font-size:28px;
+    font-weight:bold;
+    text-align:center;
+}
+    </style>
+</head>
+<body>
+
+<div class="message">❤️ A Memory Just for You ❤️</div>
+<img id="photo">
+
+<script>
+
+const ids = [
+"1ACA2rN-8aZoAN9YqnStQ56n-y__hstYG",
+"1jLzpRqZ40d59RFbQ5pV3tJkq2lsR7P7A",
+"1a8GF6XZjDlXCI4IsOx3RckYSBc9K3drN",
+"1hT99SPmm7DBBEPztkOESTWUdut8O8ZGj",
+"1QgB9asabe0LCCmSg6z7knd0bJiQlacEq",
+"1uefmBgAwo66WLYUQCa4GMnMwRTr9Vx2q",
+"1AIpcqcJPivWrArzSQPmrJbdijz_vVzTH",
+"1ovyyz9SwDTRnouRsL2-f6gAPMd-ZoXT3",
+"1Z8xYCTcqgoiGm0OHHblOGMRIN_9nfqhO",
+"14BNY9-NRjG0z2-Rut2-UbAQ_WIh8T48v",
+"1PAQ-bB90VfL2f-6HXqGxD_xqZfwZjCxd",
+"1Sr8s5pkue7yxGLrKeXm7uCAbZ9OzOMWL",
+"1MHX-K-2VmTyNwcwv34gpB-c0s7S0u9bf",
+"15nT-3y8AxM9aHF9wsZBlUiACUWEoDgbM",
+"1IMtBa2LWnVbbuHoYcwdfTXcALovtFg7m",
+"1o5BA3LbohaAN0wkGdgpQBSuwMqhun4CE",
+"16U0mH3nJqRH4QBrE6XG62vs5GGiwG8YW",
+"1Kywt8hQOZqK6iZP5tC4DubUIXc5v3hfi",
+"1cO1ar0gfulPwqnBm7705ekTJRwrayfDv",
+"1ybg9Ki6WuQA02tgCTstEQCIVMGi9QeuD",
+"1Lq7ZBzcQ5ABrUfzv8f_J-kNwe5lCcBs8",
+"1OCaQ_g5VayYp9tinFZN6pj2XIOUvQjve",
+"1xH7MybyGOzumnKDNIG3PZslUfdinK_zs",
+"1xXTd31-T0gnA_QwFaYSHZ0IOyJUA5dvJ",
+"1ihGREhLF-vYb_13vbaByOHb_DGSWkTu8",
+"1FJT1gWsmXK0QYFTuHpAZf_uAtMnXjM_X",
+"19wBPW-SveeduetZRZknuG6zqNemf6bFa",
+"1UmR66OFV0d14KIU9vo6AEmUm6n0fUbbt",
+"10T5roSvVjjzMj_AIQYYqagf4z7izyIu3",
+"1sdqfFf3sfBc2sLWhEXEOsNDWlZ3R-MpN",
+"1A9GCWkZG9_8OqLTz_s4AtVzH-zjrsYXA",
+"1eQ_IBaI3SfRYTKQ4Wm39zvsAjcayVUYo",
+"1RCOu6BIl2AcrqfMXXdw3exHxvnIpOLZS",
+"1VrIrtQIpl-mpCig3r40RWBs_oFInqYWf",
+"1BaRI5JPo9bbBBK9-LUfIOsE_Ax5dXJQK",
+"1IKAQH_fp8UzsztrNwqJS5QMRDOFAQHER",
+"1WJN_k6MsH_KRa01QR3vDGv-QTFr1kXpV",
+"1jXV9lVuG1EY1b_Aj38THiwMES2tbC4xc",
+"1De8a-8KA1_hjLy8-mgItuuI2t8nPyE-C",
+"1cf_kaFvmLsUAtUzSjg6W7CiNdEhbd9BF",
+"1pFG_AR6PNLFAsJdxJQTPJMsTOw0k6sbT",
+"1CqAqw6kgawaBCGRhNoeRunhlFR1r0Hfx",
+"1-xxyL3VF70axSDGwhy-rvJaqI_eP3sJr",
+"1nWZImoY1cFCr2fEGk2pyNoNGQ5nMnbUg",
+"1_HlgF8HvRyaYcsCQ1NpWFrw17up_ZoRO",
+"14p8HjtNOzoEDCTw9joy3HWYsxAzQv0rm",
+"1upmiPbV6CPHvjN8N55qgmZ6gGUjrR4tV",
+"1a7GK6PG0bbuh93I32uHTfx6VGHxUUkl6",
+"1JA-dq-4U4JnHsoA6atIfDg6jik7oC9CA",
+"1hjsBVH3d9SbjN8aHWYB8pD3Vu6c5I5Gi"
+];
+
+const random = ids[Math.floor(Math.random()*ids.length)];
+
+document.getElementById("photo").src =
+`https://drive.google.com/uc?export=view&id=${random}`;
+
+document.getElementById("photo").onload = () =>{
+    document.getElementById("photo").style.opacity=1;
+};
+
+</script>
+
+</body>
+</html>
