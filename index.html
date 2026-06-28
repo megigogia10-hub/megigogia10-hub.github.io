@@ -43,6 +43,16 @@ img{
     text-align:center;
     font-size:18px;
 }
+
+.tap-hint{
+    position:absolute;
+    bottom:20px;
+    color:#d63384;
+    font-size:14px;
+    text-align:center;
+    width:100%;
+    opacity:0.7;
+}
     </style>
 </head>
 <body>
@@ -50,6 +60,7 @@ img{
 <div class="message">❤️ A Memory Just for You ❤️</div>
 <img id="photo">
 <div id="error" class="error"></div>
+<div class="tap-hint">Tap to see more memories</div>
 
 <script>
 
@@ -111,7 +122,7 @@ function loadPhoto() {
     const imgElement = document.getElementById("photo");
     const errorElement = document.getElementById("error");
     
-    // Try direct Google Drive link with nocache
+    // Use embed preview URL which works better on mobile
     imgElement.src = `https://drive.google.com/uc?export=view&id=${random}&t=${Date.now()}`;
     
     imgElement.onload = () => {
@@ -120,23 +131,26 @@ function loadPhoto() {
     };
     
     imgElement.onerror = () => {
-        // If Google Drive fails, try proxy method
-        imgElement.src = `https://lh3.google.com/d/${random}=w400`;
-        imgElement.onload = () => {
-            imgElement.style.opacity = 1;
-            errorElement.textContent = "";
-        };
-        imgElement.onerror = () => {
-            errorElement.textContent = "Image not available. Try refreshing.";
-        };
+        errorElement.textContent = "Loading image...";
+        // Retry with different method
+        setTimeout(() => {
+            imgElement.src = `https://lh3.googleusercontent.com/d/${random}=w1000`;
+        }, 500);
     };
 }
 
-// Load initial photo
-loadPhoto();
+// Load initial photo on page load
+window.addEventListener('load', loadPhoto);
 
 // Refresh photo on tap/click
-document.addEventListener('click', loadPhoto);
+document.addEventListener('click', (e) => {
+    if(e.target.tagName === 'IMG' || e.target.id === 'photo') {
+        loadPhoto();
+    } else {
+        loadPhoto();
+    }
+});
+
 document.addEventListener('touchend', loadPhoto);
 
 </script>
