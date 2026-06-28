@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Memory Just for You</title>
+    <title>Happy Birthday Naswiko</title>
     <style>
 body{
     margin:0;
@@ -32,6 +32,17 @@ img{
     font-size:28px;
     font-weight:bold;
     text-align:center;
+    width:100%;
+}
+
+.subtitle{
+    position:absolute;
+    top:70px;
+    color:#d63384;
+    font-size:18px;
+    font-weight:normal;
+    text-align:center;
+    width:100%;
 }
 
 .error{
@@ -57,7 +68,8 @@ img{
 </head>
 <body>
 
-<div class="message">❤️ A Memory Just for You ❤️</div>
+<div class="message">🎂 Happy Birthday Naswiko 🎂</div>
+<div class="subtitle">❤️ A Memory Just for You ❤️</div>
 <img id="photo">
 <div id="error" class="error"></div>
 <div class="tap-hint">Tap to see more memories</div>
@@ -65,56 +77,68 @@ img{
 <script>
 
 const ids = [
-"1ACA2rN-8aZoAN9YqnStQ56n-y__hstYG",
-"1jLzpRqZ40d59RFbQ5pV3tJkq2lsR7P7A",
-"1a8GF6XZjDlXCI4IsOx3RckYSBc9K3drN",
-"1hT99SPmm7DBBEPztkOESTWUdut8O8ZGj",
-"1QgB9asabe0LCCmSg6z7knd0bJiQlacEq",
-"1uefmBgAwo66WLYUQCa4GMnMwRTr9Vx2q",
-"1AIpcqcJPivWrArzSQPmrJbdijz_vVzTH",
-"1ovyyz9SwDTRnouRsL2-f6gAPMd-ZoXT3",
-"1Z8xYCTcqgoiGm0OHHblOGMRIN_9nfqhO",
-"14BNY9-NRjG0z2-Rut2-UbAQ_WIh8T48v",
-"1PAQ-bB90VfL2f-6HXqGxD_xqZfwZjCxd",
-"1Sr8s5pkue7yxGLrKeXm7uCAbZ9OzOMWL",
-"1MHX-K-2VmTyNwcwv34gpB-c0s7S0u9bf",
-"15nT-3y8AxM9aHF9wsZBlUiACUWEoDgbM",
-"1IMtBa2LWnVbbuHoYcwdfTXcALovtFg7m",
-"1o5BA3LbohaAN0wkGdgpQBSuwMqhun4CE",
-"16U0mH3nJqRH4QBrE6XG62vs5GGiwG8YW",
-"1Kywt8hQOZqK6iZP5tC4DubUIXc5v3hfi",
-"1cO1ar0gfulPwqnBm7705ekTJRwrayfDv",
-"1ybg9Ki6WuQA02tgCTstEQCIVMGi9QeuD",
-"1Lq7ZBzcQ5ABrUfzv8f_J-kNwe5lCcBs8",
-"1OCaQ_g5VayYp9tinFZN6pj2XIOUvQjve",
-"1xH7MybyGOzumnKDNIG3PZslUfdinK_zs",
-"1xXTd31-T0gnA_QwFaYSHZ0IOyJUA5dvJ",
-"1ihGREhLF-vYb_13vbaByOHb_DGSWkTu8",
-"1FJT1gWsmXK0QYFTuHpAZf_uAtMnXjM_X",
-"19wBPW-SveeduetZRZknuG6zqNemf6bFa",
-"1UmR66OFV0d14KIU9vo6AEmUm6n0fUbbt",
-"10T5roSvVjjzMj_AIQYYqagf4z7izyIu3",
-"1sdqfFf3sfBc2sLWhEXEOsNDWlZ3R-MpN",
-"1A9GCWkZG9_8OqLTz_s4AtVzH-zjrsYXA",
-"1eQ_IBaI3SfRYTKQ4Wm39zvsAjcayVUYo",
-"1RCOu6BIl2AcrqfMXXdw3exHxvnIpOLZS",
-"1VrIrtQIpl-mpCig3r40RWBs_oFInqYWf",
-"1BaRI5JPo9bbBBK9-LUfIOsE_Ax5dXJQK",
-"1IKAQH_fp8UzsztrNwqJS5QMRDOFAQHER",
-"1WJN_k6MsH_KRa01QR3vDGv-QTFr1kXpV",
-"1jXV9lVuG1EY1b_Aj38THiwMES2tbC4xc",
-"1De8a-8KA1_hjLy8-mgItuuI2t8nPyE-C",
-"1cf_kaFvmLsUAtUzSjg6W7CiNdEhbd9BF",
-"1pFG_AR6PNLFAsJdxJQTPJMsTOw0k6sbT",
-"1CqAqw6kgawaBCGRhNoeRunhlFR1r0Hfx",
-"1-xxyL3VF70axSDGwhy-rvJaqI_eP3sJr",
-"1nWZImoY1cFCr2fEGk2pyNoNGQ5nMnbUg",
-"1_HlgF8HvRyaYcsCQ1NpWFrw17up_ZoRO",
-"14p8HjtNOzoEDCTw9joy3HWYsxAzQv0rm",
-"1upmiPbV6CPHvjN8N55qgmZ6gGUjrR4tV",
-"1a7GK6PG0bbuh93I32uHTfx6VGHxUUkl6",
-"1JA-dq-4U4JnHsoA6atIfDg6jik7oC9CA",
-"1hjsBVH3d9SbjN8aHWYB8pD3Vu6c5I5Gi"
+"10GNXXhV2mQoSMes3Uu-BMTKwW3JN5SW5",
+"11-9JXtMpIc1l3orLs3kHwpSzJzagNorl",
+"11oDDuqNoHDYSoFSptIdr3McMSt3FSeVs",
+"14a-i2dt4mvD75cc1en93Z4_p2MarQKtu",
+"16TkxoMwyvC2ypBG-PVJDM5TPYrnvaC9p",
+"16Y719UOJa_-vtebUROuulTAZdHbMyVIC",
+"16rfuCqxv2jBcuYwgU5Wo71QPCYe-TZDl",
+"17tSzjcm_GLeIP8N6-ObA5cRfztfe_kxG",
+"18o16Da_bofwINHmH17BYx7-5avpHi8tM",
+"19GeMIP0kTRqQNuur0LaY_4z1LGOQD47j",
+"19d31us90D2u6Vv_NDg4m6lW9umLiU__1",
+"1DqYpvHgXD66kLGDUxIuk4hIy57wpjFLc",
+"1EmGZYan_47wKnEf3W3ZJzvfE-i16n7Es",
+"1F3SwwAMHU5-uoeWdtiAj6wyRYhPimyYR",
+"1FJtzFgOVXwDES9smXbGBGf46cZqdfwol",
+"1GvuxO8Mix0anQavIk_cSOn4pYM6UGd4i",
+"1JTFS_ZJTfBOdJsgpxBvrgMvPXjt4EE4d",
+"1LpJe8zSM9QhYWQaIzNAKgCGFKFJzY4ER",
+"1MNDHMYcQWolDWy-nid9kQg0PgTALplMq",
+"1No1bRxvFu0MOqSmZ0l1Q_R1B9mrAnQMp",
+"1Nrx9Ux_wLvOS059j7FPUdsrlPLemutqF",
+"1PbK8XEi206ibllDQ8HVHjIN-Ho0zvfDj",
+"1QIKVsPnupk46t7G5sZp8wwknMbBc67vq",
+"1QW5eUP09ABru_Eh7TDWfb8N2iwUv2vWk",
+"1RBbSfgoAbQoiP426I1KvIj5EVuDIk-Gs",
+"1Rps8-0lwhiEa32A8_bErhFP8nFMPAqtI",
+"1T4-fJBkUE_0StNolfzXHDEkdhRe39TPo",
+"1T9Off2nDBtzGczvydNJmlWU179vcSIOk",
+"1TCPkmcUoNs-EL931UZ-xqVwueCr_kpVx",
+"1TC_7rPkJGYdw7y9eym8RKNSiJ4bAEf-q",
+"1VwkvdFz_HNeOI9gBm11PIPfCAHIXGx5R",
+"1WaWasnWJ9YEEtgp-GhNZobRIjfLjZSRF",
+"1WvRxIl9VfiwvYqbcS7WBLq4GoKybZIVd",
+"1Y8CxM2koQ3NP-FBRvN8Jox1HJff5iN3W",
+"1YoJMG6oyBoQk9viVH1wtxZNFk27Lwimg",
+"1YprLAj8VwpA3jHmnnfAtwkDXDPgYHXhU",
+"1Z9XAVdOgoavuW0g9WFTJZZpAPY2nwcQ1",
+"1_9368kgD89beq4QvF41jxfD_pX7APOBE",
+"1akiocIotWSH5XzIgahJmBUbYwmeAHN-f",
+"1au3rck90xpWuutOKxno0gixBgpEeyBzk",
+"1b6jE8aeNNA_yB4hBgdEvxSpt7uiwthKH",
+"1bL2Jf7LYZQh0bzJP1ZGvmQlrzSyK2YbN",
+"1cYOyedog_GSsXT5ngse7uV4-coSukbHR",
+"1d9EeFx86dVW_2sUEt7aAtKdz_zw71xOi",
+"1dg7CSagLE-bPFEZEJFfWik0y6ul0m17E",
+"1ei2-1y9A0rn-qexcfCTKb08KJO8v4rhF",
+"1h7J_11Ins2EqmPeSJ0gMoa1euY6rDrxB",
+"1hCNEI8ZLuKG4HlF7QaQ6FgI8Ba9U_kG_",
+"1i6O79nUaS_rktlvVEBx0VQTCt9XETzxv",
+"1iOL1v0QCvUmYGEUvLlczsycuH73T6c79",
+"1ikzzFE_4uPxJiqGUIkIf2vKg_4gcy1K5",
+"1k1zO75xzqge_Zqhb0nyC0A2L48r_6qu0",
+"1mECI5IRXxJJtvRxFZ55MZyI4FUTUBG1t",
+"1o3_L5R53h1tw160ypRXWuPelVgXIyBD_",
+"1p0O1B24QN9131gyAop7RVl83Gnvqezgv",
+"1qMNSDOMeiOFkdrBgah6PzqH9v-BydV8I",
+"1r2asJg16JDOjT4CazrRwKgqxQm9UyOys",
+"1rHTFFtjOjPR5podw5FPHhbx7R5mr_uLh",
+"1sDiUbx2osmuRuW65x5QJ1JsGjdT4VsIz",
+"1t888GOTh8mc9ThrpQluCbEg8vzUZs3GM",
+"1w6afMVUhukTSliWqzIaRXS1Qt832820o",
+"1xLeBHglYGJr9JR8Mwuwf-q95iWI97Kjj"
 ];
 
 function loadPhoto() {
@@ -122,7 +146,7 @@ function loadPhoto() {
     const imgElement = document.getElementById("photo");
     const errorElement = document.getElementById("error");
     
-    // Use embed preview URL which works better on mobile
+    // Use direct Google Drive export URL
     imgElement.src = `https://drive.google.com/uc?export=view&id=${random}&t=${Date.now()}`;
     
     imgElement.onload = () => {
@@ -132,7 +156,7 @@ function loadPhoto() {
     
     imgElement.onerror = () => {
         errorElement.textContent = "Loading image...";
-        // Retry with different method
+        // Retry with alternative method
         setTimeout(() => {
             imgElement.src = `https://lh3.googleusercontent.com/d/${random}=w1000`;
         }, 500);
@@ -143,14 +167,7 @@ function loadPhoto() {
 window.addEventListener('load', loadPhoto);
 
 // Refresh photo on tap/click
-document.addEventListener('click', (e) => {
-    if(e.target.tagName === 'IMG' || e.target.id === 'photo') {
-        loadPhoto();
-    } else {
-        loadPhoto();
-    }
-});
-
+document.addEventListener('click', loadPhoto);
 document.addEventListener('touchend', loadPhoto);
 
 </script>
