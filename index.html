@@ -33,12 +33,23 @@ img{
     font-weight:bold;
     text-align:center;
 }
+
+.error{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#d63384;
+    text-align:center;
+    font-size:18px;
+}
     </style>
 </head>
 <body>
 
 <div class="message">❤️ A Memory Just for You ❤️</div>
 <img id="photo">
+<div id="error" class="error"></div>
 
 <script>
 
@@ -95,14 +106,38 @@ const ids = [
 "1hjsBVH3d9SbjN8aHWYB8pD3Vu6c5I5Gi"
 ];
 
-const random = ids[Math.floor(Math.random()*ids.length)];
+function loadPhoto() {
+    const random = ids[Math.floor(Math.random()*ids.length)];
+    const imgElement = document.getElementById("photo");
+    const errorElement = document.getElementById("error");
+    
+    // Try direct Google Drive link with nocache
+    imgElement.src = `https://drive.google.com/uc?export=view&id=${random}&t=${Date.now()}`;
+    
+    imgElement.onload = () => {
+        imgElement.style.opacity = 1;
+        errorElement.textContent = "";
+    };
+    
+    imgElement.onerror = () => {
+        // If Google Drive fails, try proxy method
+        imgElement.src = `https://lh3.google.com/d/${random}=w400`;
+        imgElement.onload = () => {
+            imgElement.style.opacity = 1;
+            errorElement.textContent = "";
+        };
+        imgElement.onerror = () => {
+            errorElement.textContent = "Image not available. Try refreshing.";
+        };
+    };
+}
 
-document.getElementById("photo").src =
-`https://drive.google.com/uc?export=view&id=${random}`;
+// Load initial photo
+loadPhoto();
 
-document.getElementById("photo").onload = () =>{
-    document.getElementById("photo").style.opacity=1;
-};
+// Refresh photo on tap/click
+document.addEventListener('click', loadPhoto);
+document.addEventListener('touchend', loadPhoto);
 
 </script>
 
